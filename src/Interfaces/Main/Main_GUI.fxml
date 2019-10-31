@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox id="main" fx:id="mainContent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main_Controller">
+   <children>
+      <TabPane fx:id="tabPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" stylesheets="@style.css" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+        <tabs>
+          <Tab text="Reservations">
+               <content>
+                   <fx:include fx:id="bookingsPage" source="Bookings_GUI.fxml" />
+               </content>
+          </Tab>
+          <Tab text="Tables">
+            <content>
+                <fx:include fx:id="tableOrders" source="OrderManagement_GUI.fxml" />
+            </content>
+          </Tab>
+            <Tab text="Orders">
+               <content>
+                <fx:include fx:id="makeOrder" source="Ordering_GUI.fxml" />
+               </content>
+            </Tab>
+            <Tab fx:id="logout" onSelectionChanged="#logoutClicked" text="Log out" />
+        </tabs>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </TabPane>
+   </children>
+</VBox>

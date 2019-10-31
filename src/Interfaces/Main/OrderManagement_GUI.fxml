@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane fx:id="main" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ordering_System">
+   <right>
+      <BorderPane fx:id="leftBorderPane" prefHeight="600.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+         <bottom>
+            <HBox prefHeight="28.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="addBtn" mnemonicParsing="false" prefWidth="150.0" text="Add Order" />
+                  <Button fx:id="completeBtn" mnemonicParsing="false" prefWidth="150.0" text="Complete order" />
+               </children>
+            </HBox>
+         </bottom>
+         <center>
+            <ListView fx:id="detailPane" prefHeight="500.0" prefWidth="300.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </right>
+   <center>
+      <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <content>
+            <AnchorPane fx:id="tablePane" prefHeight="599.0" prefWidth="681.0" />
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,8 @@
+#main{
+    -fx-background-image: url("../background.jpeg");
+    -fx-background-size: cover;
+}
+
+#component{
+    -fx-border-color: transparent transparent black transparent;
+}
